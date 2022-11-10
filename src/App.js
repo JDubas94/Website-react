@@ -4,7 +4,7 @@ function App() {
       <header>
         <div className="headerLeft">
           <img width={40} height={40} src="/image/Dress.png" />
-          <div className="headerInfo">
+          <div>
             <h3>React Dress</h3>
             <p>Stylish dress shop</p>
           </div>

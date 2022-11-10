@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: system-ui;
+  font-family: "Inter" system-ui;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -50,5 +50,10 @@ header {
     h1 {
       margin: 0;
     }
+  }
+  .card {
+    border: 1px solid #f8f8f8;
+    padding: 20px;
+    width: 210px;
   }
 }

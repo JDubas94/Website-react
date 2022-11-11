@@ -1,50 +1,12 @@
 import Card from "./components/Card";
 import Header from "./components/Header";
+import Drawer from "./components/Drawer";
 
 function App() {
   return (
     <div className="wrapper">
-      <div style={{ display: "none" }} className="overlay">
-        <div className="drawer">
-          <h2>
-            Cart
-            <img
-              className="removeCartBtn"
-              src="/image/btn-remove.svg"
-              alt="Remove"
-            />
-          </h2>
-
-          <div className="cartItem">
-            <img
-              width={250}
-              height={350}
-              src="/image/Dress/1.png"
-              alt="Dresses"
-            />
-            <div>
-              <p>Women`s dress</p>
-              <b>100$</b>
-            </div>
-            <img
-              className="removeBtn"
-              src="/image/btn-remove.svg"
-              alt="Remove"
-            />
-          </div>
-          <div className="items"></div>
-          <div className="cartTotalBlock">
-            <ul>
-              <li className="d">
-                <span>Total:</span>
-                <div></div>
-                <b>100$</b>
-              </li>
-            </ul>
-            <button>Checkout</button>
-          </div>
-        </div>
-      </div>
+      <div style={{ display: "none" }} className="overlay"></div>
+      <Drawer />
       <Header />
 
       <div className="content">

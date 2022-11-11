@@ -1,11 +1,29 @@
-import Card from "./components/Card";
+import Card from "./components/Card/Card";
 import Header from "./components/Header";
 import Drawer from "./components/Drawer";
+
+const arr = [
+  {
+    title: "Dress women's Romashka",
+    price: 200,
+    imageUrl: "/image/Dress/2.png",
+  },
+  {
+    title: "Dress women's CityStyle",
+    price: 100,
+    imageUrl: "/image/Dress/1.png",
+  },
+  { title: "Dress women's Mod", price: 150, imageUrl: "/image/Dress/3.png" },
+  {
+    title: "Dress women's Original ",
+    price: 100,
+    imageUrl: "/image/Dress/4.png",
+  },
+];
 
 function App() {
   return (
     <div className="wrapper">
-      <div style={{ display: "none" }} className="overlay"></div>
       <Drawer />
       <Header />
 
@@ -18,34 +36,9 @@ function App() {
       </div>
 
       <div className="dress">
-        <Card />
-        <div className="card">
-          <img width={250} height={333} src="image/Dress/2.png" alt="Dress" />
-          <h5>Women's dress</h5>
-          <span>Price:</span>
-          <b>100$</b>
-          <button className="button">
-            <img width={11} height={11} src="image/plus.svg" alt="Plus" />
-          </button>
-        </div>
-        <div className="card">
-          <img width={250} height={333} src="image/Dress/3.png" alt="Dress" />
-          <h5>Women's dress</h5>
-          <span>Price:</span>
-          <b>100$</b>
-          <button className="button">
-            <img width={11} height={11} src="image/plus.svg" alt="Plus" />
-          </button>
-        </div>
-        <div className="card">
-          <img width={250} height={333} src="image/Dress/4.png" alt="Dress" />
-          <h5>Women's dress</h5>
-          <span>Price:</span>
-          <b>100$</b>
-          <button className="button">
-            <img width={11} height={11} src="image/plus.svg" alt="Plus" />
-          </button>
-        </div>
+        {arr.map((obj) => (
+          <Card title={obj.title} price={obj.price} imageUrl={obj.imageUrl} />
+        ))}
       </div>
     </div>
   );

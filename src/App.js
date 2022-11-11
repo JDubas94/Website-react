@@ -1,9 +1,18 @@
+import Card from "./components/Card";
+
 function App() {
   return (
     <div className="wrapper">
-      <div className="overlay">
+      <div style={{ display: "none" }} className="overlay">
         <div className="drawer">
-          <h2>Cart</h2>
+          <h2>
+            Cart
+            <img
+              className="removeCartBtn"
+              src="/image/btn-remove.svg"
+              alt="Remove"
+            />
+          </h2>
 
           <div className="cartItem">
             <img
@@ -21,6 +30,17 @@ function App() {
               src="/image/btn-remove.svg"
               alt="Remove"
             />
+          </div>
+          <div className="items"></div>
+          <div className="cartTotalBlock">
+            <ul>
+              <li className="d">
+                <span>Total:</span>
+                <div></div>
+                <b>100$</b>
+              </li>
+            </ul>
+            <button>Checkout</button>
           </div>
         </div>
       </div>
@@ -49,47 +69,36 @@ function App() {
           <img src="/image/search.svg" alt="Search" />
           <input placeholder="Search..." />
         </div>
+      </div>
 
-        <div className="dress">
-          <div className="card">
-            <div className="favorite">
-              <img src="/image/heart.svg" alt="Unliked" />
-            </div>
-            <img width={250} height={333} src="image/Dress/1.png" alt="Dress" />
-            <h5>Women's dress</h5>
-            <span>Price:</span>
-            <b>100$</b>
-            <button className="button">
-              <img width={11} height={11} src="image/plus.svg" alt="Plus" />
-            </button>
-          </div>
-          <div className="card">
-            <img width={250} height={333} src="image/Dress/2.png" alt="Dress" />
-            <h5>Women's dress</h5>
-            <span>Price:</span>
-            <b>100$</b>
-            <button className="button">
-              <img width={11} height={11} src="image/plus.svg" alt="Plus" />
-            </button>
-          </div>
-          <div className="card">
-            <img width={250} height={333} src="image/Dress/3.png" alt="Dress" />
-            <h5>Women's dress</h5>
-            <span>Price:</span>
-            <b>100$</b>
-            <button className="button">
-              <img width={11} height={11} src="image/plus.svg" alt="Plus" />
-            </button>
-          </div>
-          <div className="card">
-            <img width={250} height={333} src="image/Dress/4.png" alt="Dress" />
-            <h5>Women's dress</h5>
-            <span>Price:</span>
-            <b>100$</b>
-            <button className="button">
-              <img width={11} height={11} src="image/plus.svg" alt="Plus" />
-            </button>
-          </div>
+      <div className="dress">
+        <Card />
+        <div className="card">
+          <img width={250} height={333} src="image/Dress/2.png" alt="Dress" />
+          <h5>Women's dress</h5>
+          <span>Price:</span>
+          <b>100$</b>
+          <button className="button">
+            <img width={11} height={11} src="image/plus.svg" alt="Plus" />
+          </button>
+        </div>
+        <div className="card">
+          <img width={250} height={333} src="image/Dress/3.png" alt="Dress" />
+          <h5>Women's dress</h5>
+          <span>Price:</span>
+          <b>100$</b>
+          <button className="button">
+            <img width={11} height={11} src="image/plus.svg" alt="Plus" />
+          </button>
+        </div>
+        <div className="card">
+          <img width={250} height={333} src="image/Dress/4.png" alt="Dress" />
+          <h5>Women's dress</h5>
+          <span>Price:</span>
+          <b>100$</b>
+          <button className="button">
+            <img width={11} height={11} src="image/plus.svg" alt="Plus" />
+          </button>
         </div>
       </div>
     </div>

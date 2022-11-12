@@ -37,7 +37,13 @@ function App() {
 
       <div className="dress">
         {arr.map((obj) => (
-          <Card title={obj.title} price={obj.price} imageUrl={obj.imageUrl} />
+          <Card
+            title={obj.title}
+            price={obj.price}
+            imageUrl={obj.imageUrl}
+            onClickFavorite={() => console.log("Added to bookmarks")}
+            onPlus={() => console.log("Pressed plus")}
+          />
         ))}
       </div>
     </div>

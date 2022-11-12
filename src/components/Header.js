@@ -11,7 +11,6 @@ function Header() {
       <ul className="headerRight">
         <li>
           <img width={18} height={18} src="/image/Basket.svg" alt="Basket" />
-          <span>100$</span>
         </li>
         <li>
           <img width={18} height={18} src="/image/user.svg" alt="user" />
